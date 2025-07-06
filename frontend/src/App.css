@@ -1,0 +1,129 @@
+/* 1) Define your brand palette up top */
+:root {
+  --purple:   #7e48d4;
+  --cyan:     #0d73e7;
+  --magenta:  #912ae6;
+  --yellow:   #ffd700;
+
+  --text-dark:   #333333;
+  --text-light:  #ffffff;
+  --bg-body:     linear-gradient(135deg, #2a2d7a, var(--purple));
+  --bg-card:     #ffffff;
+  --text-black: black;
+
+  --radius: 8px;
+  --spacing: 16px;
+}
+
+/* 2) Page reset + background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-body);
+  color: var(--text-dark);
+}
+
+/* 3) Centered white “card” */
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: var(--bg-card);
+  padding: calc(var(--spacing) * 1.5);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 4) Logo header */
+.app-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing);
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+/* 5) Page title */
+.header {
+  text-align: center;
+  font-size: 1.75rem;
+  margin: 0 0 var(--spacing);
+  color: var(--text-black);
+  border-bottom: 2px solid var(--cyan);
+  padding-bottom: 8px;
+}
+
+/* 6) Form styles */
+.form-group {
+  margin-bottom: var(--spacing);
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+/* 7) Button with brand accent & hover */
+.button {
+  width: 100%;
+  padding: 12px;
+  background: var(--magenta);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:hover:not(:disabled) {
+  background: var(--cyan);
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 8) Results & error */
+.result-card {
+  margin-top: calc(var(--spacing) * 1.5);
+  background: #f9f9f9;
+  padding: var(--spacing);
+  border-left: 4px solid var(--purple);
+  border-radius: var(--radius);
+}
+.result-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+.result-list {
+  list-style: none;
+  padding: 0;
+}
+.result-list li {
+  margin-bottom: 6px;
+}
+
+.error {
+  color: #e53935;
+  margin-bottom: var(--spacing);
+  text-align: center;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
